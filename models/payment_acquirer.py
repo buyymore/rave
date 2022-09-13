@@ -30,7 +30,7 @@ class PaymentAcquirer(models.Model):
             acquirers = acquirers.filtered(lambda a: a.provider != 'rave')
         return acquirers
 
-
+    @api.model
     def _get_rave_api_url(self):
         self.ensure_one()
         """ Flutterwave URLs"""
